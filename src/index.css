@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  font-family: reatent;
+  /* color: #000000; */
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'reatent';
+  src: local('reatent'), url(./fonts/Montserrat-Regular.ttf) format('truetype');
+}
