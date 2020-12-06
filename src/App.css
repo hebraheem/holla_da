@@ -151,7 +151,7 @@ hr {
 
 /* ================SIDENAV JS================== */
  .sidenav {
-   position: absolute;
+   position: fixed;
    width: 20%;
    height: 656px;
    left: 0px;
@@ -387,11 +387,12 @@ iframe{
 /*============== CATEGORY STYLING JS / CSS ==============*/
 
 .category {
-  position: absolute;
-  width: 42%;
+  position: fixed;
+  width: 22.5%;
   height: auto;
-  margin-left: 105%;
-  top: 0px;
+  /* margin-left: 105%; */
+  top: 120px;
+  right: 2.5%;
   background: #FCF4FF;  
   box-shadow: 2px 3px 8px rgba(50, 32, 53, 0.05);
 }
