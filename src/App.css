@@ -370,7 +370,18 @@ hr {
   background: #fff;
   cursor: pointer;
 }
-
+.top-title{
+  display: flex;
+}
+.top-title-btn, .seemore-btn {
+  margin-left: auto;
+  color: #322035;
+  background: none;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
 .add, .save{
   font-style: normal;
   font-weight: 500;
@@ -383,6 +394,17 @@ iframe{
   width:200px;
   height: 200px;
 }
+/* =============SEE MORE PAGE SYLING================ */
+.seemore-page{
+  position: absolute;
+  width: 75%;
+  height: auto;
+  margin-left: 23%;
+  margin-top: 115px; 
+  background: #FCF4FF;
+  z-index: -1;
+  padding-top: 5%;
+}
 
 /*============== CATEGORY STYLING JS / CSS ==============*/
 
@@ -390,7 +412,6 @@ iframe{
   position: fixed;
   width: 22.5%;
   height: auto;
-  /* margin-left: 105%; */
   top: 120px;
   right: 2.5%;
   background: #FCF4FF;  

@@ -16,6 +16,7 @@ const AppProvider = ({children}) =>{
     //OVERVIEW PAGE
     const [courses, setCourse] = useState(Courses);
     const [saveOption, setSaveOption] = useState(false);
+    const [seeMore, setSeeMore] = useState(false)
 
     // SAVE VIDEO PAGE
     const [saveVideo, setSaveVideo] = useState(VideoStorage());
@@ -102,6 +103,8 @@ const AppProvider = ({children}) =>{
           handleForgotPass,
           ForgotPass,
           setForgotPass,
+          seeMore,
+          setSeeMore,
         }}
       >
         {children}

@@ -3,6 +3,7 @@ import './App.css';
 import Overview from './OverView';
 import SavedPage from './SavedPage';
 import ErrorPage from './ErrorPage';
+import SeeMore from './SeeMore'
 import Login from "./Login";
 import ForgotPassword from "./ForgotPassword";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
@@ -24,6 +25,9 @@ function App() {
             </Route>
             <Route path="/savedpage">
               <SavedPage />
+            </Route>
+            <Route path="/seemore">
+              <SeeMore />
             </Route>
             <Route path="*">
               <ErrorPage />
