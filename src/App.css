@@ -379,6 +379,10 @@ hr {
   color: #322035;
   padding-left: 25px;
 }
+iframe{
+  width:200px;
+  height: 200px;
+}
 
 /*============== CATEGORY STYLING JS / CSS ==============*/
 

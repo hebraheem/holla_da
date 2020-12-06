@@ -20,9 +20,20 @@ const Overview =()=>{
           <h2>Overview</h2>
           <div className="overview-iterate">
             {courses.map((courseList) => {
-              const { id, category, past, posted, course } = courseList;
+              const { id, category, past, posted, course,url } = courseList;
               return (
                 <div className="single-course" key={id}>
+                  <div className="iframe">
+                    <iframe
+                      title={course}
+                      width="560"
+                      height="315"
+                      src={url}
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
                   <div className="button">
                     <h4 className="course-topic">{course}</h4>
                     {saveOption && (
@@ -34,7 +45,11 @@ const Overview =()=>{
                         <p
                           className="save"
                           onClick={() =>
-                            handleSave({ course: course, category: category })
+                            handleSave({
+                              course: course,
+                              category: category,
+                              url: url,
+                            })
                           }
                         >
                           <AiFillAppstore /> Save

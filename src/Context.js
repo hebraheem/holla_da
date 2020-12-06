@@ -57,8 +57,8 @@ const AppProvider = ({children}) =>{
     //******************************************** */
 
     // SAVED VIDE0 PAGE
-    const handleSave = ({course, category}) => {
-        saveVideo.push({ course, category, id: new Date().getTime().toString()});
+    const handleSave = ({course, category,url}) => {
+        saveVideo.push({ course, category,url, id: new Date().getTime().toString()});
         setSaveVideo([ ...saveVideo]);
     };
 
