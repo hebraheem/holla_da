@@ -2,15 +2,15 @@ import React, { useState, useContext, useEffect } from 'react'
 import { Courses } from "./data";
 
 const AppContext = React.createContext()
-
-const VideoStorage = ()=>{
-    let saveClasses = localStorage.getItem("videos")
-    if(saveClasses){
-        return JSON.parse(localStorage.getItem('videos'))
-    } else {
-        return [ ]
-    }
-}
+// localStorage for saved  videos
+// const VideoStorage = ()=>{
+//     let saveClasses = localStorage.getItem("videos")
+//     if(saveClasses){
+//         return JSON.parse(localStorage.getItem('videos'))
+//     } else {
+//         return [ ]
+//     }
+// }
 
 const AppProvider = ({children}) =>{
     //OVERVIEW PAGE
@@ -19,7 +19,10 @@ const AppProvider = ({children}) =>{
     const [seeMore, setSeeMore] = useState(false)
 
     // SAVE VIDEO PAGE
-    const [saveVideo, setSaveVideo] = useState(VideoStorage());
+
+    // const [saveVideo, setSaveVideo] = useState(VideoStorage());
+
+    const [saveVideo, setSaveVideo] = useState([]);
 
     // LOGIN AND FORGOT PASSWORD PAGE
     const [userName, setUserName] = useState('');

@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-// import {useGlobalContext} from './Context'
 import { IoMdNotifications } from "react-icons/io";
 import { AiOutlineSearch } from "react-icons/ai";
 import StudentAlert from './StudentAlert'

@@ -1,25 +1,29 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {useGlobalContext} from './Context'
 
-const getLocalStorage = ()=>{
-  let storage= localStorage.getItem("input");
-  if (storage){
-    return JSON.parse(localStorage.getItem('input'))
-  }
-  else {
-    return []
-  }
-}
+//localStorage for category section
+// const getLocalStorage = ()=>{
+//   let storage= localStorage.getItem("input");
+//   if (storage){
+//     return JSON.parse(localStorage.getItem('input'))
+//   }
+//   else {
+//     return []
+//   }
+// }
+
+//const [input, setInput] = useState(getLocalStorage());
 
 function Category(){
 
     const {filterItem, allCategories} = useGlobalContext();
-    const [input, setInput] = useState(getLocalStorage());
+    const [input, setInput] = useState('');
     const [isSearchOpen, setIsSearchOpen]=useState(false);
 
-    useEffect(()=>{
-      localStorage.setItem("input", JSON.stringify(input))
-    },[input])
+    //localStorage for category section
+    // useEffect(()=>{
+    //   localStorage.setItem("input", JSON.stringify(input))
+    // },[input])
     
 
     return (

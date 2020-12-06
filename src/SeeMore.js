@@ -1,77 +1,16 @@
 import React from "react";
-import Topnav from "./Topnav"
-import Sidenav from './Sidenav'
-import { AiFillAppstore } from "react-icons/ai";
-import { useGlobalContext } from "./Context";
+import Topnav from "./Topnav";
+import Sidenav from "./Sidenav";
+import OverviewTemplate from "./OverviewTemplate";
 
-const SeeMore =()=>{
-  const {
-    courses,
-    handleSaveOptionBtn,
-    handleSave,
-    saveOption,
-  } = useGlobalContext();
-    return (
-      <>
-        <Topnav />
-        <Sidenav />
-        <div className="seemore-page">
-          <div className="overview-iterate" style={{ width: "75vw" }}>
-            {courses.map((courseList) => {
-              const { id, category, past, posted, course, url } = courseList;
-              return (
-                <div className="single-course" key={id}>
-                  <div className="iframe">
-                    <iframe
-                      title={course}
-                      width="560"
-                      height="315"
-                      src={url}
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                  <div className="button">
-                    <h4 className="course-topic">{course}</h4>
-                    {saveOption && (
-                      <div className="save-option">
-                        <p className="add">
-                          <AiFillAppstore /> Add to queue
-                        </p>
-                        <hr />
-                        <p
-                          className="save"
-                          onClick={() =>
-                            handleSave({
-                              course: course,
-                              category: category,
-                              url: url,
-                            })
-                          }
-                        >
-                          <AiFillAppstore /> Save
-                        </p>
-                      </div>
-                    )}
-                    <button
-                      type="button"
-                      className="dot-btn"
-                      onClick={() => handleSaveOptionBtn(id)}
-                    >
-                      ...
-                    </button>
-                  </div>
-                  <p className="course-name">{category}</p>
-                  <p className="posted">{posted()}</p>
-                  <p className="past">{past}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </>
-    );
-}
+const SeeMore = () => {
+  return (
+    <>
+      <Topnav />
+      <Sidenav />
+      <OverviewTemplate />
+    </>
+  );
+};
 
 export default SeeMore;
