@@ -1,5 +1,6 @@
 import React from 'react';
 import { AiFillAppstore } from "react-icons/ai";
+import { VscSaveAs } from "react-icons/vsc";
 import {NavLink} from 'react-router-dom'
 
 
@@ -25,7 +26,7 @@ function Sidenav() {
             to="/savedpage"
           >
             <p className="saved-btn">
-              <AiFillAppstore />
+              <VscSaveAs />
               <span className="hideSmall">Saved Classes</span>
             </p>
           </NavLink>
