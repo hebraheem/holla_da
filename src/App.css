@@ -75,6 +75,12 @@ hr {
   height: 80px;
   z-index: 2;
 }
+.logo-r{
+  position: absolute;
+  top: 13px;
+  left: 5%;
+  font-size: 2.5rem;
+}
 
 .search-input{
   width: 28%;

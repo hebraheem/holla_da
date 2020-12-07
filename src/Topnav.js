@@ -3,6 +3,7 @@ import { IoMdNotifications } from "react-icons/io";
 import { AiOutlineSearch } from "react-icons/ai";
 import StudentAlert from './StudentAlert'
 import Alert from './Alert'
+import reatentLogoR from './images/reatentLogoR.png';
 
 const Topnav = ()=>{
   const [searchInput, setSearchInput] = useState();
@@ -17,6 +18,9 @@ const Topnav = ()=>{
   return (
     <>
       <div className="topnav">
+        <div className="reatent-logo">
+          <img src={reatentLogoR} alt="" className="logo-r" />
+        </div>
         <div className="form-div">
           <form action="" className="search-form" onSubmit={handleSubmit}>
             <input
@@ -28,7 +32,7 @@ const Topnav = ()=>{
               onClick={() => setSearchInput(searchInput)}
             />
             <button className="search-btn">
-              <AiOutlineSearch style={{color:"white"}} />
+              <AiOutlineSearch style={{ color: "white" }} />
             </button>
           </form>
         </div>
